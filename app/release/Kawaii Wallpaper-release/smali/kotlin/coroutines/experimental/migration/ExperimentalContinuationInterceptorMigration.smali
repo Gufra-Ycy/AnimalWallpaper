@@ -1,0 +1,261 @@
+.class public final Lkotlin/coroutines/experimental/migration/ExperimentalContinuationInterceptorMigration;
+.super Ljava/lang/Object;
+.source "CoroutinesMigration.kt"
+
+# interfaces
+.implements Lkotlin/coroutines/experimental/ContinuationInterceptor;
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    bv = {
+        0x1,
+        0x0,
+        0x3
+    }
+    d1 = {
+        "\u0000\"\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0007\u0008\u0002\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u000c\u001a\u00020\u000b\u00a2\u0006\u0004\u0008\u0010\u0010\u0011J)\u0010\u0005\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0003\"\u0004\u0008\u0000\u0010\u00022\u000c\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0003H\u0016\u00a2\u0006\u0004\u0008\u0005\u0010\u0006R\u001a\u0010\n\u001a\u0006\u0012\u0002\u0008\u00030\u00078V@\u0016X\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0008\u0010\tR\u0019\u0010\u000c\u001a\u00020\u000b8\u0006@\u0006\u00a2\u0006\u000c\n\u0004\u0008\u000c\u0010\r\u001a\u0004\u0008\u000e\u0010\u000f\u00a8\u0006\u0012"
+    }
+    d2 = {
+        "Lkotlin/coroutines/experimental/migration/ExperimentalContinuationInterceptorMigration;",
+        "Lkotlin/coroutines/experimental/ContinuationInterceptor;",
+        "T",
+        "Lkotlin/coroutines/experimental/Continuation;",
+        "continuation",
+        "interceptContinuation",
+        "(Lkotlin/coroutines/experimental/Continuation;)Lkotlin/coroutines/experimental/Continuation;",
+        "Lkotlin/coroutines/experimental/CoroutineContext$Key;",
+        "getKey",
+        "()Lkotlin/coroutines/experimental/CoroutineContext$Key;",
+        "key",
+        "Lkotlin/coroutines/ContinuationInterceptor;",
+        "interceptor",
+        "Lkotlin/coroutines/ContinuationInterceptor;",
+        "getInterceptor",
+        "()Lkotlin/coroutines/ContinuationInterceptor;",
+        "<init>",
+        "(Lkotlin/coroutines/ContinuationInterceptor;)V",
+        "kotlin-stdlib-coroutines"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x4,
+        0x0
+    }
+.end annotation
+
+
+# instance fields
+.field private final interceptor:Lkotlin/coroutines/ContinuationInterceptor;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lkotlin/coroutines/ContinuationInterceptor;)V
+    .locals 1
+    .param p1    # Lkotlin/coroutines/ContinuationInterceptor;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+
+    const-string v0, "interceptor"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lkotlin/coroutines/experimental/migration/ExperimentalContinuationInterceptorMigration;->interceptor:Lkotlin/coroutines/ContinuationInterceptor;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public fold(Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)Ljava/lang/Object;
+    .locals 1
+    .param p2    # Lkotlin/jvm/functions/Function2;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<R:",
+            "Ljava/lang/Object;",
+            ">(TR;",
+            "Lkotlin/jvm/functions/Function2<",
+            "-TR;-",
+            "Lkotlin/coroutines/experimental/CoroutineContext$Element;",
+            "+TR;>;)TR;"
+        }
+    .end annotation
+
+    const-string v0, "operation"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {p0, p1, p2}, Lkotlin/coroutines/experimental/ContinuationInterceptor$DefaultImpls;->fold(Lkotlin/coroutines/experimental/ContinuationInterceptor;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public get(Lkotlin/coroutines/experimental/CoroutineContext$Key;)Lkotlin/coroutines/experimental/CoroutineContext$Element;
+    .locals 1
+    .param p1    # Lkotlin/coroutines/experimental/CoroutineContext$Key;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<E::",
+            "Lkotlin/coroutines/experimental/CoroutineContext$Element;",
+            ">(",
+            "Lkotlin/coroutines/experimental/CoroutineContext$Key<",
+            "TE;>;)TE;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+    .end annotation
+
+    const-string v0, "key"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {p0, p1}, Lkotlin/coroutines/experimental/ContinuationInterceptor$DefaultImpls;->get(Lkotlin/coroutines/experimental/ContinuationInterceptor;Lkotlin/coroutines/experimental/CoroutineContext$Key;)Lkotlin/coroutines/experimental/CoroutineContext$Element;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final getInterceptor()Lkotlin/coroutines/ContinuationInterceptor;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lkotlin/coroutines/experimental/migration/ExperimentalContinuationInterceptorMigration;->interceptor:Lkotlin/coroutines/ContinuationInterceptor;
+
+    return-object v0
+.end method
+
+.method public getKey()Lkotlin/coroutines/experimental/CoroutineContext$Key;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lkotlin/coroutines/experimental/CoroutineContext$Key<",
+            "*>;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    .line 1
+    sget-object v0, Lkotlin/coroutines/experimental/ContinuationInterceptor;->Key:Lkotlin/coroutines/experimental/ContinuationInterceptor$Key;
+
+    return-object v0
+.end method
+
+.method public interceptContinuation(Lkotlin/coroutines/experimental/Continuation;)Lkotlin/coroutines/experimental/Continuation;
+    .locals 1
+    .param p1    # Lkotlin/coroutines/experimental/Continuation;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lkotlin/coroutines/experimental/Continuation<",
+            "-TT;>;)",
+            "Lkotlin/coroutines/experimental/Continuation<",
+            "TT;>;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const-string v0, "continuation"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    iget-object v0, p0, Lkotlin/coroutines/experimental/migration/ExperimentalContinuationInterceptorMigration;->interceptor:Lkotlin/coroutines/ContinuationInterceptor;
+
+    invoke-static {p1}, Lkotlin/coroutines/experimental/migration/CoroutinesMigrationKt;->toContinuation(Lkotlin/coroutines/experimental/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    invoke-interface {v0, p1}, Lkotlin/coroutines/ContinuationInterceptor;->interceptContinuation(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lkotlin/coroutines/experimental/migration/CoroutinesMigrationKt;->toExperimentalContinuation(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/experimental/Continuation;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public minusKey(Lkotlin/coroutines/experimental/CoroutineContext$Key;)Lkotlin/coroutines/experimental/CoroutineContext;
+    .locals 1
+    .param p1    # Lkotlin/coroutines/experimental/CoroutineContext$Key;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/coroutines/experimental/CoroutineContext$Key<",
+            "*>;)",
+            "Lkotlin/coroutines/experimental/CoroutineContext;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const-string v0, "key"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {p0, p1}, Lkotlin/coroutines/experimental/ContinuationInterceptor$DefaultImpls;->minusKey(Lkotlin/coroutines/experimental/ContinuationInterceptor;Lkotlin/coroutines/experimental/CoroutineContext$Key;)Lkotlin/coroutines/experimental/CoroutineContext;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public plus(Lkotlin/coroutines/experimental/CoroutineContext;)Lkotlin/coroutines/experimental/CoroutineContext;
+    .locals 1
+    .param p1    # Lkotlin/coroutines/experimental/CoroutineContext;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    const-string v0, "context"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1
+    invoke-static {p0, p1}, Lkotlin/coroutines/experimental/ContinuationInterceptor$DefaultImpls;->plus(Lkotlin/coroutines/experimental/ContinuationInterceptor;Lkotlin/coroutines/experimental/CoroutineContext;)Lkotlin/coroutines/experimental/CoroutineContext;
+
+    move-result-object p1
+
+    return-object p1
+.end method

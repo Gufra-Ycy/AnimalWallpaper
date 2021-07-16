@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "937172423479",
+    "project_id": "ordinal-crowbar-297407",
+    "storage_bucket": "ordinal-crowbar-297407.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937172423479:android:698767e92a5b0c899500b2",
+        "android_client_info": {
+          "package_name": "com.threezero.animewallpapers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "937172423479-thin1j3vakfrqi92sne7b68rqtj0vauv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMp6u_xy4ORLvGkeba7DMZsiPYlhrc1Qw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "937172423479-thin1j3vakfrqi92sne7b68rqtj0vauv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

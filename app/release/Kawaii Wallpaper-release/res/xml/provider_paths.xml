@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path name="imgs" path="." />
+    <external-files-path name="my_imgs" path="/" />
+    <files-path name="my_wallpapers" path="." />
+</paths>

@@ -1,0 +1,7 @@
+include ':animation'
+include ':bloom'
+include ':livewallpapers'
+include ':Bling'
+include ':wallpaper360'
+include ':app'
+rootProject.name = "Anime Wallpapers"
